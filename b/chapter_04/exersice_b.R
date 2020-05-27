@@ -1,6 +1,0 @@
-data("esoph")
-
-esoph
-
-
-

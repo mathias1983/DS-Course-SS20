@@ -51,7 +51,7 @@ X = B / A
 A = [2 2 2; 4 4 4; 6 6 6];
 
 # In Julia operators are functions. For multiplication and division
-# element-wise operation with a number is in this case defined for "*" and "/".
+# element-wise operation with a number as in this case is defined for "*" and "/".
 # But not for "+" and "-".
 println("A+1", A+1); # MethodError; A.+1 would work
 println("A-1", A-1); # MethodError; A.-1 would work

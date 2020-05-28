@@ -35,8 +35,9 @@ println( "(B \\ C) == (inv(B) * C) => ", B \ C == inv(B) * C) # evaluates to tru
 
 A = [2 4; 2 3;2 3];
 B = [32; -4; 7];
-# the following works even though A has rectangular shape and dimensions don't
-# fit. Division is possible by using a polyalgorithm (some math tricks).
+# The following works even though A has rectangular shape and dimensions don't
+# fit. Division is possible because the backslash operator is using
+# a polyalgorithm that does some math tricks behind the scenes to make it work.
 # https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/#Base.:\\-Tuple{AbstractArray{T,2}%20where%20T,Union{AbstractArray{T,1},%20AbstractArray{T,2}}%20where%20T}
 X = A \ B
 

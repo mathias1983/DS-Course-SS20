@@ -28,10 +28,10 @@ println(A .* B)
 # ### 3. What about matrix division with "/" or "\"?!
 C = A * B
 println("\n\n Right division operator")
-println( "(c / b) == (c * inv(b)) => ",  c / B == C * inv(B)) # evaluates to true
+println( "(C / B) == (C * inv(B)) => ",  C / B == C * inv(B)) # evaluates to true
 
 println("\n\n Lef division operator")
-println( "(b \\ c) == (inv(b) * c) => ", B \ C == inv(B) * C) # evaluates to true
+println( "(B \\ C) == (inv(B) * C) => ", B \ C == inv(B) * C) # evaluates to true
 
 A = [2 4; 2 3;2 3];
 B = [32; -4; 7];

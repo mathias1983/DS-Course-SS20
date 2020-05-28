@@ -3,35 +3,35 @@ using LinearAlgebra
 
 # ### 1. Create two matrices of the same layout and test if addition and subtraction
 #        of the matrix works as expected: C = A + B
-a = [2 2 2 2; 2 2 2 2]
-b = [1 1 3 3; 1 1 3 3]
+A = [2 2 2 2; 2 2 2 2]
+B = [1 1 3 3; 1 1 3 3]
 println("\n matrix addition")
-println(a + b) # works
+println(A + B) # works
 
 println("\n matrix subtraction works")
-println(a - b) # works
+println(A - B) # works
 
 
 
 # ### 2. Now compare matrix multiplication either this way A * B and
 #        this way A .* B. Whats the difference?!
-a = [1 1; 2 2]
-b = [1 2; 1 3]
+A = [1 1; 2 2]
+B = [1 2; 1 3]
 println("\n A  * B (matrix multiplication)")
-println(a * b)
+println(A * B)
 
 println("\n A .* B (dot syntax for vectorized function; element-wise operation Ai * Bi)")
-println(a .* b)
+println(A .* B)
 
 
 
 # ### 3. What about matrix division with "/" or "\"?!
-c = a * b
+C = A * B
 println("\n\n Right division operator")
-println( "(c / b) == (c * inv(b)) => ",  c / b == c * inv(b)) # evaluates to true
+println( "(c / b) == (c * inv(b)) => ",  c / B == C * inv(B)) # evaluates to true
 
 println("\n\n Lef division operator")
-println( "(b \\ c) == (inv(b) * c) => ", b \ c == inv(b) * c) # evaluates to true
+println( "(b \\ c) == (inv(b) * c) => ", B \ C == inv(B) * C) # evaluates to true
 
 A = [2 4; 2 3;2 3];
 B = [32; -4; 7];
@@ -41,7 +41,7 @@ B = [32; -4; 7];
 X = A \ B
 
 # this won't work; no fancy polyalgorithm; DimensionMissmatch is thrown
-# X = B / A
+X = B / A
 
 
 
@@ -50,10 +50,10 @@ X = A \ B
 A = [2 2 2; 4 4 4; 6 6 6];
 
 # In Julia operators are functions. For multiplication and division
-# element-wise operation with a number is defined for "*" and "/".
+# element-wise operation with a number is in this case defined for "*" and "/".
 # But not for "+" and "-".
-#println("A+1", A+1); # MethodError; A.+1 would work
-#println("A-1", A-1); # MethodError; A.-1 would work
+println("A+1", A+1); # MethodError; A.+1 would work
+println("A-1", A-1); # MethodError; A.-1 would work
 println("A*2", A*2); # works element-wise (like .*)
 println("A/2", A/2); # works element-wise (like ./)
 

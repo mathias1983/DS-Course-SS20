@@ -30,7 +30,7 @@ C = A * B
 println("\n\n Right division operator")
 println( "(C / B) == (C * inv(B)) => ",  C / B == C * inv(B)) # evaluates to true
 
-println("\n\n Lef division operator")
+println("\n\n Left division operator")
 println( "(B \\ C) == (inv(B) * C) => ", B \ C == inv(B) * C) # evaluates to true
 
 A = [2 4; 2 3;2 3];
